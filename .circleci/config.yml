@@ -52,7 +52,7 @@ jobs:
     #command: ssh ec2-user@ec2-34-246-124-91.eu-west-1.compute.amazonaws.com -i ~/repo/.ssh/shss-stg-key-euw-1.pem -o StrictHostKeyChecking=no "sh /home/ec2-user/deploy.sh"
     
     
-    workflows:
+workflows:
   version: 2
   build-and-deploy:
     jobs:
