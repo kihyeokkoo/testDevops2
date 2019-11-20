@@ -41,13 +41,13 @@ jobs:
       #- run: mvn integration-test
       
       #test deploy
-    deploy:
-      machine:
-        enabled: true
-      steps:
-        - run:
-            name: Deploy Over SSH
-            command: ./deploy-test.sh
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Deploy Over SSH
+          command: ./deploy-test.sh
     #command: scp [옵션] [계정명]@[원격지IP주소]:[원본 경로 및 파일] [전송받을 위치]
     #command: ssh ec2-user@ec2-34-246-124-91.eu-west-1.compute.amazonaws.com -i ~/repo/.ssh/shss-stg-key-euw-1.pem -o StrictHostKeyChecking=no "sh /home/ec2-user/deploy.sh"
     
