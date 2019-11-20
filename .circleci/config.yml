@@ -45,6 +45,7 @@ jobs:
     machine:
       enabled: true
     steps:
+      - checkout
       - run:
           name: Deploy Over SSH
           command: ./deploy-test.sh
@@ -62,4 +63,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: sequential-branch-filter
