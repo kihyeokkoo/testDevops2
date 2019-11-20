@@ -38,14 +38,14 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: mvn integration-test
+      #- run: mvn integration-test
       
       #test deploy
-  deploy:
-    machine:
-      enabled: true
-    steps:
-      - run:
+    deploy:
+      machine:
+        enabled: true
+      steps:
+        - run:
           name: Deploy Over SSH
           command: ./deploy-test.sh
     #command: scp [옵션] [계정명]@[원격지IP주소]:[원본 경로 및 파일] [전송받을 위치]
