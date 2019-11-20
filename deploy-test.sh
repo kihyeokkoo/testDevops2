@@ -1,0 +1,1 @@
+rsync -avP /home/circleci/repo/target/testDevops2-0.0.1-SNAPSHOT.jar ec2-user@ec2-34-246-124-91.eu-west-1.compute.amazonaws.com:/home/ec2-user/testDevops2-0.0.1-SNAPSHOT.jar -e "ssh -o StrictHostKeyChecking=no"
