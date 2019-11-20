@@ -41,8 +41,8 @@ jobs:
       - run: mvn integration-test
       
       #test deploy
-  deploy:
-    name: SSH File Transfer
+    deploy:
+      name: SSH File Transfer
     command: ./deploy-test.sh
-    #command: scp [¿É¼Ç] [°èÁ¤¸í]@[¿ø°İÁöIPÁÖ¼Ò]:[¿øº» °æ·Î ¹× ÆÄÀÏ] [Àü¼Û¹ŞÀ» À§Ä¡]
+    #command: scp [ì˜µì…˜] [ê³„ì •ëª…]@[ì›ê²©ì§€IPì£¼ì†Œ]:[ì›ë³¸ ê²½ë¡œ ë° íŒŒì¼] [ì „ì†¡ë°›ì„ ìœ„ì¹˜]
     #command: ssh ec2-user@ec2-34-246-124-91.eu-west-1.compute.amazonaws.com -i ~/repo/.ssh/shss-stg-key-euw-1.pem -o StrictHostKeyChecking=no "sh /home/ec2-user/deploy.sh"
