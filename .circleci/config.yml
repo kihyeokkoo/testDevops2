@@ -41,7 +41,7 @@ jobs:
       #- run: mvn integration-test
       
       #test deploy
-  deploy1:
+  deploy:
     machine:
       enabled: true
     working_directory: ~/repo
@@ -55,7 +55,7 @@ workflows:
   build-and-deploy:
     jobs:
       - build1
-      - deploy1
+      - deploy
           requires:
             - build1
           filters:
