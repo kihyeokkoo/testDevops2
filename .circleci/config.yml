@@ -48,7 +48,7 @@ jobs:
     steps:
       - run:
           name: Deploy Over SSH
-          command: shmod 777 ./deploy-test.sh | sh ./deploy-test.sh
+          command: chmod 777 ./deploy-test.sh | sh ./deploy-test.sh
 workflows:
   version: 2
   build-and-deploy:
