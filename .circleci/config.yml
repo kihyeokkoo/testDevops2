@@ -48,7 +48,8 @@ jobs:
     steps:
       - run:
           name: Deploy Over SSH
-          command: chmod 777 ./deploy-test.sh | sh ./deploy-test.sh
+          command: ssh ec2-user@ec2-34-246-124-91.eu-west-1.compute.amazonaws.com -i ~/.ssh/shss-stg-key-euw-1.pem -o StrictHostKeyChecking=no "./deploy.sh"
+          #command: chmod 777 ./deploy-test.sh | sh ./deploy-test.sh
 workflows:
   version: 2
   build-and-deploy:
