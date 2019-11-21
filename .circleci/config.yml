@@ -46,6 +46,7 @@ jobs:
       enabled: true
     working_directory: ~/repo
     steps:
+      - checkout
       - run:
           name: Deploy Over SSH
           command: ssh ec2-user@ec2-34-246-124-91.eu-west-1.compute.amazonaws.com -i ~/.ssh/shss-stg-key-euw-1.pem -o StrictHostKeyChecking=no "./deploy.sh"
