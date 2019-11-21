@@ -55,9 +55,4 @@ workflows:
   build-and-deploy:
     jobs:
       - build1
-      - deploy1:
-          requires:
-            - build
-          filters:
-            branches:
-              only: sequential-branch-filter
+      - deploy1
